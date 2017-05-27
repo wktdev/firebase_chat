@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="blocChat">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Bloc Chat</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="/styles/frame.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+</head>
+<body>
+    <ui-view></ui-view>
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+    <!-- ui-router-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+    <!-- ui-bootstrap-tpls-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+
+    <!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBqi4ZdWdRInrU3198v8LnzJaAemqLq3YU",
+    authDomain: "chatroom-87fa8.firebaseapp.com",
+    databaseURL: "https://chatroom-87fa8.firebaseio.com",
+    projectId: "chatroom-87fa8",
+    storageBucket: "chatroom-87fa8.appspot.com",
+    messagingSenderId: "480358281111"
+  };
+  firebase.initializeApp(config);
+</script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/services/Room.js"></script>
+       <script src="/scripts/services/Message.js"></script>
+    <script src="/scripts/controllers/MainCtrl.js"></script>
+    <script src="/scripts/controllers/ModalCtrl.js"></script>
+</body>
+</html>
