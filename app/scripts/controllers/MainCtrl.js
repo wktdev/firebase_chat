@@ -1,7 +1,6 @@
 (function() {
     function MainCtrl(Room, Message, $uibModal) {
-
-        main = this;
+        var main = this;
         main.chatRoomArray = Room.all;
 
         main.openNewRoomModal = function(){
@@ -12,15 +11,9 @@
             });
         };
 
-        main.setCurrentRoom = function(name, id){
-            console.log("get room messages here!");
-            main.currentRoomTitle = name;
-            console.log("Current room id:" + id);
-            main.messageArray = Message.getByRoomId(id);
-        }
-
-
-
+        main.setCurrentRoom = function(room) {
+            main.messageArray = Message.getByRoomId(room.$id);
+        };
     }
 
     angular

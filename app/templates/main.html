@@ -6,8 +6,8 @@
         <button class="new-room-button" type="button" ng-click="main.openNewRoomModal()">New room</button>
 
         <ul class="rooms-list">
-            <li class="room-name" ng-repeat="item in main.chatRoomArray" ng-click="main.setCurrentRoom(item.$value, item.$id)">
-                  {{item.$value}}
+            <li class="room-name" ng-repeat="room in main.chatRoomArray" ng-click="main.setCurrentRoom(room)">
+                  {{room.$value}}
             </li>
         </ul>
 
