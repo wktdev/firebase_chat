@@ -12,6 +12,6 @@
   }
 
   angular
-    .module('blocChat',['ngCookies','ui.bootstrap'])
+    .module('blocChat')
     .run(['$cookies', '$uibModal', BlocChatCookies]);
 })();

@@ -13,6 +13,6 @@
     };
 
     angular
-        .module('blocChat',['ngCookies','ui.bootstrap'])
+        .module('blocChat')
         .controller('UserModalCtrl', ['$cookies', '$uibModalInstance', UserModalCtrl]);
 })();
