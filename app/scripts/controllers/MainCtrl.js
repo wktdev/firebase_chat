@@ -14,6 +14,14 @@
         main.setCurrentRoom = function(room) {
             main.messageArray = Message.getByRoomId(room.$id);
         };
+
+
+        main.sendMessage = function() {
+          var currentTime = "1:00pm";
+          console.log(main.message);
+          Message.send(main.message);
+          main.message = "";
+        }
     }
 
     angular
