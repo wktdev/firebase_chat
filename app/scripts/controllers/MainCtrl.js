@@ -20,7 +20,7 @@
         main.setCurrentRoom = function(room) {
             main.messageArray = Message.getByRoomId(room.$id);
             console.log(room.$id);
-            main.currentRoomId = room.$id
+            main.currentRoomId = room.$id;
 
         };
 
