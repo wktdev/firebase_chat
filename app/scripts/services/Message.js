@@ -19,9 +19,9 @@
         //     });
         // }
 
-        Message.send = function(newMessage,roomId) {
+        Message.send = function(newMessage,roomId, user) {
             console.log("YES " + roomId );
-            messages.$add({ content: newMessage, roomId: roomId})
+            messages.$add({ content: newMessage, roomId: roomId, user: user})
         }
 
 

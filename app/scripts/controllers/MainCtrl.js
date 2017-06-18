@@ -30,7 +30,7 @@
         main.sendMessage = function() {
             var currentTime = "1:00pm";
             console.log();
-            Message.send(main.message, main.currentRoomId, currentTime, main.currentUser);
+            Message.send(main.message, main.currentRoomId, main.currentUser);
             main.message = "";
         }
     }
