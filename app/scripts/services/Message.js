@@ -6,11 +6,12 @@
         var messages = $firebaseArray(ref);
 
         Message.getByRoomId = function(roomId) {
-            var array = $firebaseArray(ref.orderByChild("roomId").equalTo(parseInt(roomId)));
+            var array = $firebaseArray(ref.orderByChild("roomId").equalTo(roomId));
+            // var array = $firebaseArray(ref.orderByChild("roomId").equalTo(parseInt(roomId)));
             return array;
         };
 
-             // Message.send = function(newMessage, roomname, time, usrname) {
+        // Message.send = function(newMessage, roomname, time, usrname) {
         //     messages.$add({ content: newMessage, roomId: roomname, sentAt: time, username: usrname }).then(function(ref) {
         //         var id = ref.key;
         //         console.log("added new message with id " + id);
@@ -18,12 +19,9 @@
         //     });
         // }
 
-        Message.send = function(newMessage) {
-            messages.$add({ content: newMessage}).then(function(ref) {
-                var id = ref.key;
-                console.log("added new message with id " + id);
-                messages.$indexFor(id); // returns location in the array
-            });
+        Message.send = function(newMessage,roomId) {
+            console.log("YES " + roomId );
+            messages.$add({ content: newMessage, roomId: roomId})
         }
 
 
