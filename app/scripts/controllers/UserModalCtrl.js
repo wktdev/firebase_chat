@@ -5,7 +5,8 @@
         userModal.setUsername = function() {
             if(userModal.username){
               $cookies.put('blocChatCurrentUser', userModal.username);
-              $uibModalInstance.dismiss('cancel');
+               $uibModalInstance.close()
+               window.location.reload(true);
             } else {
               alert("Username should not be empty!");
             }
