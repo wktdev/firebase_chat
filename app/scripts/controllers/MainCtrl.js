@@ -25,12 +25,11 @@
         };
 
 
-  
 
         main.sendMessage = function() {
             var currentTime = "1:00pm";
-            console.log();
-            Message.send(main.message, main.currentRoomId, main.currentUser);
+            console.log($cookies.get("blocChatCurrentUser"));
+            Message.send(main.message, main.currentRoomId, $cookies.get("blocChatCurrentUser"));
             main.message = "";
         }
     }
