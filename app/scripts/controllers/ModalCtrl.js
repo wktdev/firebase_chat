@@ -2,7 +2,7 @@
     function ModalCtrl(Room, $uibModalInstance) {
         var modal = this;
 
-        modal.chatRoomArray = Room.all;
+     
         modal.statusBar = "Enter a room name";
 
         modal.addData = function(){
@@ -17,7 +17,6 @@
         modal.cancel = function(){
             $uibModalInstance.dismiss('cancel');
         };
-
 
     };
 

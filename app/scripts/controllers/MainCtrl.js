@@ -1,5 +1,5 @@
 (function() {
-    function MainCtrl(Room, Message, $uibModal) {
+    function MainCtrl(Room, $uibModal) {
         var main = this;
         main.chatRoomArray = Room.all;
 
@@ -18,6 +18,6 @@
 
     angular
         .module('blocChat')
-        .controller('MainCtrl', ['Room', 'Message', '$uibModal', MainCtrl]);
+        .controller('MainCtrl', ['Room', '$uibModal', MainCtrl]);
 
 })();

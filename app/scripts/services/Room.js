@@ -8,11 +8,16 @@
     room.all = rooms;
 
     room.addNewRoom = function(roomName) {
+        rooms.$add(roomName);
+
+        /*________________________________________ To see id do this:
+
         rooms.$add(roomName).then(function(ref) {
           var id = ref.key;
           console.log("added "+ roomName + " with id " + id);
-          rooms.$indexFor(id); 
+        
         });
+        __________________________________________________________END */
     };
 
 
