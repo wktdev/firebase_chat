@@ -10,9 +10,9 @@
             return array;
         };
 
-        Message.send = function(newMessage,roomId, user) {
+        Message.send = function(newMessage,roomId) {
             console.log("YES " + roomId );
-            messages.$add({ content: newMessage, roomId: roomId, user: user})
+            messages.$add({ content: newMessage, roomId: roomId})
         }
 
 
