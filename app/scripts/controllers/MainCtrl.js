@@ -1,11 +1,9 @@
 (function() {
-    function MainCtrl(Room, Message, $uibModal, $cookies) {
+    function MainCtrl(Room, Message, $uibModal) {
         var main = this;
         main.chatRoomArray = Room.all;
 
-        if ($cookies.get('blocChatCurrentUser')) {
-            main.currentUser = $cookies.get('blocChatCurrentUser');
-        }
+    
 
         main.openNewRoomModal = function() {
             var modalInstance = $uibModal.open({
@@ -26,16 +24,11 @@
 
 
 
-        main.sendMessage = function() {
-            var currentTime = "1:00pm";
-            console.log($cookies.get("blocChatCurrentUser"));
-            Message.send(main.message, main.currentRoomId, $cookies.get("blocChatCurrentUser"));
-            main.message = "";
-        }
+    
     }
 
     angular
         .module('blocChat')
-        .controller('MainCtrl', ['Room', 'Message', '$uibModal', '$cookies', MainCtrl]);
+        .controller('MainCtrl', ['Room', 'Message', '$uibModal', MainCtrl]);
 
 })();
